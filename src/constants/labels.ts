@@ -60,6 +60,8 @@ export const LABELS = {
   POST_DELETED: 'Post deleted successfully',
   UNAUTHORIZED: 'Unauthorized access',
   ROLE_ACCESS_DENIED: 'Access Denied: Your role does not have permission to access this route.',
+  SOMETHING_WENT_WRONG: 'Something went wrong',
+  TRY_AGAIN: 'Try again',
 
   // API Messages
   API_ERROR: 'Something went wrong. Please try again.',
