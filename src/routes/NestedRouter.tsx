@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { Routes } from 'react-router-dom';
-import RenderNestedRoute from './renderNestedRoute';
+import RenderNestedRoute from './RenderNestedRoute';
 import { finalRoutes } from '../config/index.routes';
 
 function NestedRouter() {

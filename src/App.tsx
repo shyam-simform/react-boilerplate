@@ -4,7 +4,7 @@ import { store } from './store';
 import Navigation from './components/common/navigation';
 
 import './App.css';
-import NestedRouter from './routes/nestedRouter';
+import NestedRouter from './routes/NestedRouter';
 
 function App() {
   return (

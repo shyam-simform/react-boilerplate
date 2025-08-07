@@ -7,4 +7,5 @@ export type NestedRoute = {
   children?: NestedRoute[];
   extra?: React.FC<{ children: React.ReactNode }>;
   guards?: React.FC<{ children: React.ReactNode }>[];
+  isAuth?: boolean;
 };

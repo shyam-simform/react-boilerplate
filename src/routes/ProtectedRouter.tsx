@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { useGetProfileQuery } from '../../store/api/auth-api';
-import { LABELS } from '../../constants/labels';
+import { useGetProfileQuery } from '../store/api/auth-api';
+import { LABELS } from '../constants/labels';
 
 interface ProtectedRouteProps {
   children: React.ReactNode;

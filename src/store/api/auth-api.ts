@@ -11,6 +11,7 @@ const generateDummyUser = (id?: number): User => ({
   fullName: `User ${Math.floor(Math.random() * 100)}`,
   email: `user${Math.floor(Math.random() * 100)}@example.com`,
   createdAt: new Date().toISOString(),
+  role: 'analyst',
   updatedAt: new Date().toISOString(),
 });
 
@@ -36,6 +37,7 @@ export const AuthAPI = createApi({
           const user = generateDummyUser();
           user.email = credentials.email;
           user.fullName = credentials.email.split('@')[0]; // Use email prefix as name
+          user.role = 'analyst'; // Default role
 
           // Set authentication state
           isUserLoggedIn = true;
