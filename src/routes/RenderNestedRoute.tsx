@@ -2,6 +2,7 @@ import { Route } from 'react-router-dom';
 import type { NestedRoute } from '../types/nestedRoute';
 import PublicRouter from './PublicRouter';
 import ProtectedRoute from './ProtectedRouter';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 type RenderNestedRouteProps = {
   routes: NestedRoute[];
 };
@@ -11,6 +12,9 @@ function RenderNestedRoute({ routes }: RenderNestedRouteProps) {
     <>
       {routes.map((route) => {
         let Component = <route.element />;
+
+        Component = <ErrorBoundary>{Component}</ErrorBoundary>;
+
         if (route.extra) {
           Component = <route.extra>{Component}</route.extra>;
         }
