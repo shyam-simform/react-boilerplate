@@ -30,6 +30,12 @@ export const LABELS = {
   BACK: 'Back',
   LOADING: 'Loading...',
 
+  // Maintenance Labels
+  MAINTENANCE_TITLE: 'Site Under Maintenance',
+  MAINTENANCE_MESSAGE:
+    'We are currently performing scheduled maintenance. We will be back shortly.',
+  MAINTENANCE_CHECK_BACK: 'Please check back in a few minutes.',
+
   // File Upload Labels
   UPLOAD_FILE: 'Upload File',
   SELECT_FILES: 'Select Files',
