@@ -41,6 +41,8 @@ export const LABELS = {
   HOME: 'Home',
   LOGOUT: 'Logout',
   PROFILE: 'Profile',
+  ADMIN_DASHBOARD: 'Admin Dashboard',
+  ANALYST_DASHBOARD: 'Analyst Dashboard',
 
   // Messages
   LOGIN_SUCCESS: 'Login successful',
@@ -51,6 +53,7 @@ export const LABELS = {
   POST_UPDATED: 'Post updated successfully',
   POST_DELETED: 'Post deleted successfully',
   UNAUTHORIZED: 'Unauthorized access',
+  ROLE_ACCESS_DENIED: 'Access Denied: Your role does not have permission to access this route.',
 
   // API Messages
   API_ERROR: 'Something went wrong. Please try again.',

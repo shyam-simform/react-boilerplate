@@ -1,8 +1,8 @@
-import RoleBasedRoute from '../components/common/role-based-route';
+import RoleBasedGuardsRoute from './RoleBasedGuardsRoute';
 
 const withRoleGuard = (allowedRoles: string[]) => {
   return function RoleGuard({ children }: { children: React.ReactNode }) {
-    return <RoleBasedRoute allowedRoles={allowedRoles}>{children}</RoleBasedRoute>;
+    return <RoleBasedGuardsRoute allowedRoles={allowedRoles}>{children}</RoleBasedGuardsRoute>;
   };
 };
 

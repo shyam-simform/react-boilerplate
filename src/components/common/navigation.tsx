@@ -55,6 +55,20 @@ const Navigation: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             {isAuthenticated ? (
               <>
+                <Link
+                  to="/admin/dashboard"
+                  className="text-gray-700 hover:text-blue-600 font-medium"
+                >
+                  {LABELS.ADMIN_DASHBOARD}
+                </Link>
+
+                <Link
+                  to="/analyst/dashboard"
+                  className="text-gray-700 hover:text-blue-600 font-medium"
+                >
+                  {LABELS.ANALYST_DASHBOARD}
+                </Link>
+
                 <Link to="/posts" className="text-gray-700 hover:text-blue-600 font-medium">
                   {LABELS.POSTS}
                 </Link>
