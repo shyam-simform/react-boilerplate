@@ -1,16 +1,18 @@
 import { Outlet } from 'react-router-dom';
 import type { NestedRoute } from '../types/nestedRoute';
-import Home from '../pages/home-simple';
-import Login from '../pages/auth/login';
-import Signup from '../pages/auth/signup';
-import PostList from '../pages/post/post-list';
-import PostForm from '../pages/post/post-form';
-import AdminDashboard from '../pages/admin/dashboard';
-import AnalystDashboard from '../pages/analyst/dashboard';
-import HospitalDashboard from '../pages/hospital/dashboard';
 import withRoleGuard from '../guards/withRoleGuard';
 import withMaintenanceGuard from '../guards/withMaintenanceGuard';
-import MaintenancePage from '../pages/maintenance';
+import { lazy } from 'react';
+
+const Home = lazy(() => import('../pages/home-simple'));
+const Login = lazy(() => import('../pages/auth/login'));
+const Signup = lazy(() => import('../pages/auth/signup'));
+const PostList = lazy(() => import('../pages/post/post-list'));
+const PostForm = lazy(() => import('../pages/post/post-form'));
+const AdminDashboard = lazy(() => import('../pages/admin/dashboard'));
+const AnalystDashboard = lazy(() => import('../pages/analyst/dashboard'));
+const HospitalDashboard = lazy(() => import('../pages/hospital/dashboard'));
+const MaintenancePage = lazy(() => import('../pages/maintenance'));
 
 export const finalRoutes: NestedRoute[] = [
   {
