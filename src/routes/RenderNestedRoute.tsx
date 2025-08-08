@@ -3,6 +3,8 @@ import type { NestedRoute } from '../types/nestedRoute';
 import PublicRouter from './PublicRouter';
 import ProtectedRoute from './ProtectedRouter';
 import ErrorBoundary from '../components/common/ErrorBoundary';
+import SuspenseWrapper from '../components/common/SuspenseWrapper';
+
 type RenderNestedRouteProps = {
   routes: NestedRoute[];
 };
@@ -13,7 +15,11 @@ function RenderNestedRoute({ routes }: RenderNestedRouteProps) {
       {routes.map((route) => {
         let Component = <route.element />;
 
-        Component = <ErrorBoundary>{Component}</ErrorBoundary>;
+        Component = (
+          <ErrorBoundary>
+            <SuspenseWrapper>{Component}</SuspenseWrapper>
+          </ErrorBoundary>
+        );
 
         if (route.extra) {
           Component = <route.extra>{Component}</route.extra>;
